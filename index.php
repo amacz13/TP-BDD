@@ -1,6 +1,6 @@
 <?php
 
-$conn = mysqli_connect('localhost', 'root', '', 'conciergerie');
+require_once('config.php')
 
 ?>
 
@@ -21,7 +21,7 @@ echo "Nous possédons ".$res->num_rows." produit(s)";
         <?php
         while ($data = mysqli_fetch_array($res)) {
             //var_dump($data);
-            echo "<li>".$data['id']."</li>";
+            echo "<li>".$data['name']."</li>";
         }
         ?>
     </ul>
